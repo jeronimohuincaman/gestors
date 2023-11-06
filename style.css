@@ -1,0 +1,15 @@
+body {
+    width: 100%; height: 100vh;
+}
+
+.container-form {
+    margin: 0 15%;
+}
+
+.contenedor{
+    background-color: #004a99;
+}
+
+.form {
+    background-color: lightgray;
+}

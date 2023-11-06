@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Gestión de empleados</title>
+</head>
+
+<body>
+    <div class="contenedor min-vh-100 justify-center items-center">
+        <div class="container-sm py-5">
+            <h1 class="text-center text-white mb-5">Gestion de empleados</h1>
+            <form action="" id="form" class="form rounded-5 py-4 my-3 needs-validation" novalidate>
+                <div class="container-form">
+                    <div class="row justify-content-around">
+                        <div class="col-5">
+                            <label for="nombre" class="w-100">
+                                Nombre
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </label>
+                        </div>
+                        <div class="col-5">
+                            <label for="apellido" class="w-100">
+                                Apellido
+                                <input type="text" class="form-control" id="apellido" name="apellido" required>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-5">
+                            <label for="dni" class="w-100">
+                                DNI
+                                <input type="number" id="dni" class="form-control" name="dni" required>
+                            </label>
+                        </div>
+                        <div class="col-5">
+                            <label for="fecha_nacimiento" class="w-100">
+                                Fecha de nacimiento
+                                <input type="date" id="fecha_nacimiento" class="form-control" name="fecha_nacimiento"
+                                    required>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-5">
+                            <label for="fecha_alta" class="w-100">
+                                Fecha de alta
+                                <input type="date" id="fecha_alta" class="form-control" name="fecha_alta" required>
+                            </label>
+                        </div>
+                        <div class="col-5">
+                            <label for="estado_civil" class="w-100">
+                                Estado Civil
+                                <select id="estado_civil" class="form-select" aria-label="Estado civil"
+                                    name="estado_civil" required>
+                                    <option value="soltero">Soltero/a</option>
+                                    <option value="casado">Casado/a</option>
+                                    <option value="viudo">Viudo/a</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-5">
+                            <label for="sueldo_base" class="w-100">
+                                Sueldo Base
+                                <input type="text" class="form-control" id="sueldo_base" name="sueldo_base" required>
+                            </label>
+                        </div>
+                        <div class="col-5">
+                            <label for="puesto_trabajo" class="w-100">
+                                Puesto de trabajo
+                                <select id="puesto_trabajo" class="form-select" aria-label="puesto de trabajo"
+                                    name="puesto_trabajo">
+                                    <option id="obrero">Obrero</option>
+                                    <option id="rrhh">RRHH</option>
+                                    <option id="jefe_seccion">Jefe de sección</option>
+                                    <option id="director_ejecutivo">Director ejecutivo</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="row mt-3 mb-3">
+                            <button class="btn btn-primary">Crear</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="container ">
+                <button class="btn btn-info" id="empleados">Empleados</button>
+                <button class="btn btn-success" id="personas">Personas</button>
+                <button class="btn btn-warning" id="jefes">Jefes</button>
+            </div>
+        </div>
+        <div id="response" class="container mb-1 pb-2">
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+<script src="bootstrap.config.js"></script>
+
+</html>
